@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import './App.css';
 import { Input } from './components/Input';
 import { Result } from './components/Result';
 import { selectValue, valueSet } from './state/value';
