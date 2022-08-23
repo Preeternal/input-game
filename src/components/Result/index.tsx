@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useMemo } from 'react';
 import { ResultContainer, ResultSimvol } from './styles';
 import { CORRECT_ANSWER } from '../../config';
 
@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const Result = memo(({ value }: Props) => {
-    const valuesArray = value?.toString().split('');
+    const valuesArray = useMemo(() => value?.toString().split(''), [value]);
     return (
         <ResultContainer>
             {valuesArray?.map((val, index) => (
